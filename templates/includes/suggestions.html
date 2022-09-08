@@ -1,0 +1,43 @@
+<div class="right-side">
+        
+    <div class="recommendations">
+
+        <div class="profile-banner">
+
+            <img src="{{ user.get('profile_url') }}" alt="profile-pic" /> </li>
+            <h>{{ user.get('username') }}</h>
+            
+        </div>
+
+    </div>
+    
+    <div class="suggestions">
+
+        <h1>Suggestions for you</h1>
+
+        
+    </div>
+
+  <div class="accounts">
+
+
+        {% for account in suggestions %}
+
+        <section>
+            <img src="{{ account.get('profile_url') }}" alt="suggestion pic for {{account.get('username')}}" />
+            
+            <div> 
+                <p> {{ account.get('username') }} </p>
+                <p1> suggested for you </p1>
+            </div>
+                
+            <a href="#"> follow </a> 
+              
+        </section>
+        
+        {% endfor %}
+
+
+    </div>
+
+</div>

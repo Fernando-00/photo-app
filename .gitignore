@@ -1,0 +1,5 @@
+*.pyc
+.env
+env
+react-client/node_modules
+react-client/build

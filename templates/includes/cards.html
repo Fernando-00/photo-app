@@ -1,0 +1,100 @@
+{% for post in posts %}
+
+<div class="card">
+
+    
+
+    <section class="card-header">
+        
+        <p><b>{{ post.get('user').get('username') }}</b></p>
+        <i class="fas fa-ellipsis-h"></i>
+        
+    </section>
+
+
+    <section class="post-picture">
+
+        <img src="{{ post.get('image_url') }}" alt="profile pic for {{post.get('user').get('username')}}" />
+
+    </section>
+
+    <section class="symbols">
+
+        <section class="left-symbols">
+
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment"></i>
+            <i class="far fa-paper-plane"></i>
+
+        </section>
+
+        
+
+        <section class="right-symbol">
+
+            <i class="far fa-bookmark"></i>
+
+        </section>
+
+
+    </section>
+
+    <section class="likes">
+        <p><b>  {{post.get('likes')}} likes </b></p>
+    </section>
+
+
+
+    <section class="comments">
+
+        <p><b>{{ post.get('user').get('username') }} </b> {{post.get('title')}}<a href="#"> more </a></p>
+
+
+        {% if post.comments|length > 1 %}
+
+
+            <p><b>{{post.comments[0].get('user').get('username')}}</b> {{post.comments[0].get('text')}}</p>
+
+            <p> <a href="#">View all {{post.comments|length}} comments</a> </p>
+            
+        {% elif post.comments|length == 1 %}
+
+            <p><b>{{post.comments[0].get('user').get('username')}}</b>{{post.comments[0].get('text')}}</p>
+
+        {% else %}
+
+            <p> </p>
+
+        {% endif %}
+
+        
+
+        <div class="comment-date">
+
+            <p>{{post.get('display_time')}}</p>
+
+        </div>
+       
+
+
+    </section>
+
+    <section class="comment-section">
+
+        <section class="comment-emoji">
+            <i class="far fa-smile"></i>
+            <p>Add a comment...</p>
+        </section>
+
+        <section class="post">
+            <p><a href="#"> Post </a></p>
+        </section>
+
+
+    </section>
+            
+</div>
+
+
+
+{% endfor %}

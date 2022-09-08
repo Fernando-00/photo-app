@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><title>PhotoApp</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+</head>
+
+<body>
+    
+    {% include 'includes/navbar.html' %}
+
+    {% include 'includes/suggestions.html' %}
+
+    
+    <div class="main">
+        
+        {% include 'includes/stories.html' %}
+
+        {% include 'includes/cards.html' %}
+
+        
+
+</body>
+</html>
+
+<!-- To easily add alt-text to an image users can edit that option after they choose a filter(similar to instagram). 
+    To make it more accessible we could move it from the advanced settings in to the regular editing settings.
+    To add alt-text to an already posted image, users can choose the three dots to edit the photo and choose an edit alt-text
+    option on their device. -->

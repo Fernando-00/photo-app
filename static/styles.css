@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #D9D9D9; 
+    box-sizing: border-box;
+}
+
+/* NAV BAR */
+
+nav {
+    width: 100%;
+    float: right;
+}
+
+.top-right{
+    float: right;
+    padding-right: 30px;
+    font-family: Helvetica;
+}
+
+.nav-bar h1 {
+    font-family: Comfortaa;
+}
+
+.top-right a {
+    text-decoration: none;
+    color: #466CCC;
+}
+
+.nav-bar{
+    width: 100%;
+    background: white;
+    display: flex;
+    position: sticky;
+    top: 0;
+    
+}
+
+.nav-bar h1 {
+    width: 20%;
+    padding-left: 20px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+/* RECOMMENDATIONS PANEL */
+
+.recommendations img {
+    border-radius: 50%;
+}
+
+.profile-banner {
+    display: grid;
+    grid-template-columns: 50px auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    padding-top: 50px;
+    font-size: 28px;
+    font-family: Comfortaa;
+    padding-top: 30px;
+}
+
+.right-side{
+    width: 30vw;
+    position: fixed;
+    right: 0px;
+}
+
+.suggestions{
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 0px;
+    color: grey;
+    font-family: Helvetica;
+    font-size: 13px;
+}
+
+.accounts section {
+    display: grid;
+    grid-template-columns: 50px 180px auto; /* three columns */
+    align-items: center;  /* This aligns/centers items vertically */
+    font-size: 13px;
+    font-family: Helvetica;
+}
+
+.accounts section div {
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+.accounts section div p {
+    font-size: 16px;
+}
+
+.accounts section img {
+    border-radius: 50%;
+}
+
+.accounts section a {
+    text-decoration: none; /* removes underline from links */
+    color: #466CCC
+}
+
+.accounts section div p1 {
+    color: #9B9B9B;
+}
+
+/* STORIES */
+
+.main{
+    justify-content: space-between;
+    width: 70%;
+    padding: 5% 10%;
+}
+
+.stories{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+.stories div img {
+    border-radius: 50%;
+}
+
+.stories div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.stories div p {
+    color: #9B9B9B;
+}
+
+/* CARD */
+
+.card{
+    background: white;
+    margin-top: 20px;
+    border: 1px solid #9A9A9A;
+    display: block;
+
+}
+
+.card .post-picture img{
+    width: 100%;
+    height: 500px;
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .symbols section{
+    display: flex;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.card .comments {
+    flex-wrap: wrap;
+    padding-left: 20px;
+    font-family: Helvetica;
+    font-size: 14px;
+}
+
+.card .comments p{
+    padding-right: 20px;
+}
+
+.card .comments a {
+    padding-left: 15px;
+    text-decoration: none;
+    color: #466CCC;
+}
+
+.card .symbols section i{
+    font-size: 25px;
+}
+
+.card .likes {
+    padding-left: 20px;
+}
+
+.card .comment-section{
+    box-sizing: border-box;
+    border: 1px solid #9A9A9A;
+    display: grid;
+    grid-template-columns: 300px auto;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card .comment-section .comment-emoji{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: Helvetica;
+}
+
+.card .comment-section .post{
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-emoji p {
+    padding-left: 20px;
+    color: grey;
+}
+
+.comment-section .post a {
+    color: #466CCC;
+    text-decoration: none;
+}
+
+.card .comment-section i{
+    font-size: 25px;
+}
+
+.card .symbols .left-symbols{
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+.card .symbols .right-symbol {
+    padding-right: 20px;
+}
+
+.card .symbols {
+    display: grid;
+    grid-template-columns: 115px auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header i {
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.card-header p {
+    padding-left: 20px;
+    font-family: Comfortaa;
+    font-size: 20px;
+}
+
+.card .comments .comment-date{
+    color: grey;
+    font-family: Helvetica;
+    font-size: 12px;
+}
+
+
+@media (max-width: 900px) {
+
+    .right-side{
+        display: none;
+    }
+    
+    .main {
+        width: 100%;
+        align-items: center;
+    }
+
+    .post, .stories {
+        min-width: auto;
+    }
+
+    .nav-bar h1 {
+        width: 80%;
+    }
+
+    nav {
+        width: 100%;
+    }
+}
