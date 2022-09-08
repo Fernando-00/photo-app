@@ -15,7 +15,7 @@ from flask import send_from_directory
 
 app = Flask(__name__)
 app.static_folder = [
-    os.path.join(app.root_path, 'react-client', 'build', 'static'),
+    os.path.join(app.root_path, 'react-client', 'src', 'static'),
     os.path.join(app.root_path, 'static')
 ]
 cors = CORS(app, 
@@ -61,7 +61,7 @@ initialize_routes(api)
 @app.route('/')
 @decorators.jwt_or_login
 def home():
-    return send_from_directory(app.root_path + '/react-client/build', 'index.html')
+    return send_from_directory(app.root_path + '/react-client/src', 'index.html')
 
 @app.route('/api')
 @app.route('/api/')
