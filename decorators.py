@@ -4,11 +4,14 @@ from flask import redirect
 def jwt_or_login(view_function):
     def wrapper(*args, **kwargs):
         try:
+            print("attempting login")
             flask_jwt_extended.verify_jwt_in_request()
             # this is the inner function (which is below the decorator) 
             # that executes only if some condition is met
+            print("login successful")
             return view_function(*args, **kwargs)
         except:
+            print("loggin failed")
             return redirect('/login', code=302)
             
     # https://stackoverflow.com/questions/17256602/assertionerror-view-function-mapping-is-overwriting-an-existing-endpoint-functi

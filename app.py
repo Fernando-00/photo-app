@@ -61,6 +61,7 @@ initialize_routes(api)
 @app.route('/')
 @decorators.jwt_or_login
 def home():
+    print("loggin in")
     return send_from_directory(app.root_path + '/react-client/build', 'index.html')
 
 @app.route('/api')
