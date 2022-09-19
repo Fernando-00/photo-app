@@ -3,13 +3,13 @@
   <img src="https://i.ibb.co/WfGz83x/Photo-App.png" alt="Photo-App" width="700">
 </h1>
 
-<h4 align="center">A recreation of the original reversi game in C++.</h4>
+<h4 align="center">A photo app meant to replicate main functions of Instagram</h4>
 
 ## Main Page
-<img src="https://i.ibb.co/FDpLyqM/photo-app-main.png" alt="Reversi" height="500">
+<img src="https://i.ibb.co/FDpLyqM/photo-app-main.png" alt="Main" height="500">
 
 ## Interacting With Post
-<img src="https://i.ibb.co/nz8JCpH/photo-app-post.png" alt="Reversi" height="500">
+<img src="https://i.ibb.co/nz8JCpH/photo-app-post.png" alt="Post" height="500">
 
 ## Key Features
 
